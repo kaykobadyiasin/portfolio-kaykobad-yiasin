@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import project from '../../assets/project/matribhumi-city.png'
+import project2 from '../../assets/project/Image-Gallery.png'
+import project3 from '../../assets/project/freedom-yoga.png'
+import project4 from '../../assets/project/freedom-yoga.png'
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -57,6 +60,100 @@ const skills = [
 //     { icon: 'devicon-plain:photoshop' },
 // ]
 
+
+
+const projects = [
+    {
+        "_id": "1",
+        "title": "Project - 1",
+        "description": "Real estate property booking website (Matribhumi City BD)",
+        "technologies": ["React", "JavaScript", "Tailwind", "MERN Stack"],
+        "features": [
+            "Real Estate website user can book properties, and admin can add, edit, delete new properties.",
+            "Users can visit the company through the book visit form before booking the property.",
+            "User can't log in to the admin dashboard. Only admin can access the dashboard through email and password."
+        ],
+        "links": {
+            "visitSite": "https://matribhumicitybd.netlify.app/",
+            "visitCode": "https://drive.google.com/file/d/1KPbt_p1DeYt0MtVysOIRDo--eXoY7ocg/view"
+        },
+        "image": `${project}`
+    },
+    {
+        "_id": "2",
+        "title": "Project - 2",
+        "description": "Selected images can delete and add new images ( Simple Image Gallery )",
+        "technologies": ["React", "JavaScript", "Tailwind"],
+        "features": [
+            "Developed a React.js-powered image gallery with seamless uploads and additions for a dynamic visual experience.",
+            "Implemented user-friendly controls for selecting and deleting specific or multiple images, enhancing user control.",
+            "Optimized gallery performance by saving uploaded images in local storage, ensuring responsiveness and efficiency."
+        ],
+        "links": {
+            "visitSite": "https://65480900f16551161d26235f--magenta-taiyaki-9e2cc9.netlify.app/",
+            "visitCode": "https://github.com/kaykobadyiasin/Image-Gallery-Task"
+        },
+        "image": `${project2}`
+    },
+    {
+        "_id": "3",
+        "title": "Project - 3",
+        "description": "Class booking through stripe payment method and visit instructors classes ( Freedom Yoga )",
+        "technologies": ["React", "JavaScript", "Tailwind", "MERN"],
+        "features": [
+            "Implemented Firebase Authentication for a secure user entry point on the Freedom Yoga platform.",
+            "Enhanced user navigation for easy class bookings with specific instructors.",
+            "Stripe secured payments, user-friendly class management."
+        ],
+        "links": {
+            "visitSite": "https://freedom-yoga-6b25a.web.app/"
+        },
+        "image": `${project3}`
+    },
+    {
+        "_id": "4",
+        "title": "Project - 4",
+        "description": "Display own skills, experience, projects, education, and contact info ( Portfolio Website )",
+        "technologies": ["React", "JavaScript", "Tailwind"],
+        "features": [
+            "Initiate React project and integrate Tailwind CSS for styling.",
+            "Construct React components for portfolio sections using JavaScript for dynamic content.",
+            "Optimize code for performance and responsiveness; deploy the portfolio using platforms like Netlify or Vercel."
+        ],
+        "links": {
+            "visitSite": "https://example.com/project4/",
+            "visitCode": "https://github.com/user/project4"
+        },
+        "image": `${project4}`
+    },
+]
+
+
+const experiences = [
+
+    {
+        "_id": "2",
+        "position": "Full Stack Developer",
+        "company": "Matribhumi City",
+        "duration": "Dec 2023 - Present",
+        "logo": "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/400089755_716584007188431_5954228664237433551_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=_M1vwJB8ZlYAX8Ocx8T&_nc_ht=scontent.fdac14-1.fna&oh=00_AfABidEIRvIpSfFCQH6uQqTfp7m-UDI-5ZNHeJ5H4AD8mA&oe=65B102C4",
+        "description": "Another job description.",
+        "skills": ["React.js", "Next.js", "Problem Solving"]
+    },
+    {
+        "_id": "1",
+        "position": "Frontend developer web intern",
+        "company": "Weero Digital",
+        "duration": "Aug 2023 - Nov 2023",
+        "logo": "https://studio.skill.jobs/media/logo/Weero.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni omnis odio aspernatur obcaecati, tempore eos nobis facilis et iste!",
+        "skills": ["React.js", "Team Work"]
+    }
+]
+
+
+
+
 const Home = () => {
 
     const [itemIndex, setItemIndex] = useState(null);
@@ -107,97 +204,97 @@ const Home = () => {
                 <div className='xl:mx-0 mx-5 mt-36'>
                     <h2 className='text-3xl font-semibold pb-5 text-center border-b-2 border-gray-700 text-slate-300'>Experience</h2>
                     <div className='my-20 grid lg:grid-cols-2 gap-5 text-gray-400'>
-                        <div className='w-full bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 rounded-md p-[1px]'>
-                            <div className='bg-[#060817] rounded-md p-4'>
-                                <div className='flex gap-5 mb-5'>
-                                    <div>
-                                        <img src="https://studio.skill.jobs/media/logo/Weero.png" className='w-14 h-14 object-cover rounded-md' alt="" />
-                                    </div>
-                                    <div>
-                                        <h2 className='font-semibold text-xl capitalize text-slate-300'>Frontend developer web intern</h2>
-                                        <h4 className='font-semibold'>Weero Digital</h4>
-                                        <h6 className='text-md'>Aug 2023 - Nov 2023</h6>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni omnis odio aspernatur obcaecati, tempore eos nobis facilis et iste!</p>
-                                </div>
-                                <div className='flex flex-wrap gap-3 mt-5'>
-                                    <span className='border flex justify-center items-center px-5 py-1 rounded-md'>Next.js</span>
-                                    <span className='border flex justify-center items-center px-5 py-1 rounded-md'>Team Work</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='w-full bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 rounded-md p-[1px]'>
-                            <div className='bg-[#060817] rounded-md p-4'>
-                                <div className='flex gap-5 mb-5'>
-                                    <div>
-                                        <img src="https://studio.skill.jobs/media/logo/Weero.png" className='w-14 h-14 object-cover rounded-md' alt="" />
-                                    </div>
-                                    <div>
-                                        <h2 className='font-semibold text-xl capitalize text-slate-300'>Frontend developer web intern</h2>
-                                        <h4 className='font-semibold'>Weero Digital</h4>
-                                        <h6 className='text-md'>Aug 2023 - Nov 2023</h6>
+
+                        {
+                            experiences?.map((item, index) => (
+                                <div key={index} className='w-full bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 rounded-md p-[1px]'>
+                                    <div className='bg-[#060817] rounded-md p-4 min-h-full'>
+                                        <div className='flex gap-5 mb-5'>
+                                            <div>
+                                                <img src={item?.logo} className='w-14 h-14 object-cover rounded-md' alt="" />
+                                            </div>
+                                            <div>
+                                                <h2 className='font-semibold text-xl capitalize text-slate-300'>{item?.position}</h2>
+                                                <h4 className='font-semibold'>{item?.company}</h4>
+                                                <h6 className='text-md'>{item?.duration}</h6>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>{item?.description}</p>
+                                        </div>
+                                        <div className='flex flex-wrap gap-3 mt-5'>
+                                            {
+                                                experiences?.map((item, index) => (
+
+                                                    <span key={index} className='border flex justify-center items-center px-5 py-1 rounded-md'>{item?.skills}</span>
+
+                                                ))}
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni omnis odio aspernatur obcaecati, tempore eos nobis facilis et iste!</p>
-                                </div>
-                                <div className='flex flex-wrap gap-3 mt-5'>
-                                    <span className='border flex justify-center items-center px-5 py-1 rounded-md'>React</span>
-                                    <span className='border flex justify-center items-center px-5 py-1 rounded-md'>JavaScript</span>
-                                    <span className='border flex justify-center items-center px-5 py-1 rounded-md'>Tailwind</span>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
+
                     </div>
                 </div>
 
                 {/* projects  */}
                 <div className='xl:mx-0 mx-5 mt-36'>
                     <h2 className='text-3xl font-semibold pb-5 text-center border-b-2 border-gray-700 text-slate-300'>Projects</h2>
-                    <div className='flex flex-col gap-8 my-20'>
-                        <div className='flex xl:flex-row-reverse flex-col-reverse items-center  border-gray-700 p-5 rounded-lg text-gray-400'>
-                            <div className='xl:ml-20 ml-0 border-gray-700 xl:border-l-2 xl:pl-20 xl:mt-0 mt-10'>
-                                <div className='flex flex-col gap-5'>
-                                    <h3 className='text-xl font-semibold text-slate-300 capitalize'>Real Easted Property Booking Website <span className='text-transparent bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 bg-clip-text'>( </span>Matribhumi City BD<span className='text-transparent bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 bg-clip-text'> )</span> </h3>
-                                    <div className='flex flex-wrap gap-3'>
-                                        <span className='border min-w-16 flex justify-center items-center px-3 py-1 rounded-md'>React</span>
-                                        <span className='border min-w-16 flex justify-center items-center px-3 py-1 rounded-md'>JavaScript</span>
-                                        <span className='border min-w-16 flex justify-center items-center px-3 py-1 rounded-md'>Tailwind</span>
-                                        <span className='border min-w-16 flex justify-center items-center px-3 py-1 rounded-md'>MERN Stack</span>
+                    <div className='flex flex-col gap-14 my-20'>
+                        {
+                            projects?.map((item, index) => (
+                                <div key={index}>
+                                    <div className='flex xl:flex-row-reverse flex-col-reverse items-center justify-between border-gray-700 p-5 rounded-lg text-gray-400'>
+                                        <div className='lg:w-[70%] xl:ml-20 ml-0 border-gray-700 xl:border-l-2 xl:pl-20 xl:mt-0 mt-10'>
+                                            <div className='flex flex-col gap-5'>
+                                                <h5>{item?.title}</h5>
+                                                <h3 className='text-xl font-semibold text-slate-300 capitalize'>{item?.description}</h3>
+                                                <div className='flex flex-wrap gap-3'>
+
+                                                    {
+                                                        item?.technologies?.map((technology, index) => (
+                                                            <div key={index}>
+                                                                <span className='border min-w-16 flex justify-center items-center px-3 py-1 rounded-md'>{technology}</span>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </div>
+                                            <ul className='my-5  w-full list-inside list-disc '>
+
+                                                {
+                                                    item?.features?.map((feature, index) => (
+                                                        <div key={index} className='pl-5 my-3'>
+                                                            <li className='flex gap-4 '>
+                                                                <span>•</span>
+                                                                <span>{feature}</span>
+                                                            </li>
+                                                        </div>
+                                                    ))
+                                                }
+                                            </ul>
+                                            <div className='flex items-center gap-5 mt-3'>
+                                                {item?.links?.visitSite ?
+                                                    <Link to={item?.links?.visitSite} target='_blank' className=' text-lg rounded-md px-8 py-2 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 text-white'>Visit Site</Link> : <></>
+                                                }
+
+                                                {item?.links?.visitCode ?
+                                                    <Link to={item?.links?.visitCode} target='_blank' className=' text-lg rounded-md px-8 py-2 border'>Visit Github code</Link> : <></>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div className=''>
+                                            <div className='xl:h-[500px] h-[400px] bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 shadow-2xl shadow-cyan-500/50 xl:w-[500px] overflow-hidden rounded-md '>
+                                                <img src={item?.image} className='w-full rounded-md' alt="" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <ul className='my-5  w-full list-inside list-disc text-justify'>
-                                    <div className='pl-5 space-y-5'>
-                                        <li className='flex gap-4 '>
-                                            <span>•</span> {/* You can replace this with your preferred list marker */}
-                                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quis esse harum aut nulla ipsa provident, aperiam magni qui laborum animi minus corporis accusantium sint numquam eaque. Quibusdam dolores repudiandae quae minima aliquam consequatur a quos. Optio consequatur dolorem porro laboriosam, impedit voluptas sunt maxime. Repellendus possimus repudiandae accusamus facere.</span>
-                                        </li>
-                                        <li className='flex gap-4'>
-                                            <span>•</span>
-                                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat nobis tempore nostrum repellat asperiores, amet natus. Soluta, praesentium fugit!</span>
-                                        </li>
-                                        <li className='flex gap-4'>
-                                            <span>•</span>
-                                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat nobis tempore nostrum repellat asperiores, amet natus. Soluta, praesentium fugit!</span>
-                                        </li>
-                                    </div>
-                                </ul>
-                                <div className='flex items-center gap-5 mt-3'>
-                                    <Link to={'https://matribhumicitybd.netlify.app/'} target='_blank' className=' text-lg rounded-md px-8 py-2 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 text-white'>Visit Site</Link>
-                                    <Link to={'https://drive.google.com/file/d/1KPbt_p1DeYt0MtVysOIRDo--eXoY7ocg/view'} target='_blank' className=' text-lg rounded-md px-8 py-2 border'>Visit to code</Link>
-                                </div>
-                            </div>
-                            <div className=''>
-                                <div className='xl:h-[500px] h-[400px] bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 shadow-2xl shadow-cyan-500/50 xl:w-[500px] overflow-hidden rounded-md '>
-                                    <img src={project} className='w-full rounded-md' alt="" />
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </div>
                 </div>
-
 
 
                 {/* education  */}
