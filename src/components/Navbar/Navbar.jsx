@@ -19,7 +19,7 @@ const Navbar = () => {
                     <div>
                         <Link href={'/'} className='text-xl font-semibold'>Kaykobad Yiasin</Link>
                     </div>
-                    <div className='lg:block hidden'>
+                    {/* <div className='lg:block hidden'>
                         <div className='flex items-center gap-10'>
                             {
                                 navList?.map((item, index) => (
@@ -27,9 +27,9 @@ const Navbar = () => {
                                 ))
                             }
                         </div>
-                    </div>
+                    </div> */}
                     <div>
-                        <Link to={'https://github.com/kaykobadyiasin'} target='_blank' className=' text-lg rounded-md px-8 py-3 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600'>Visit Github</Link>
+                        <Link to={'https://github.com/kaykobadyiasin'} target='_blank' className=' text-lg rounded-md px-8 py-3 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 hover:bg-gradient-to-l transition-all duration-300'>Visit Github</Link>
                     </div>
                 </div>
             </nav>

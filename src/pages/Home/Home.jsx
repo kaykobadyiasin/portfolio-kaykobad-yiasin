@@ -3,7 +3,7 @@ import Banner from '../../components/Banner/Banner';
 import project from '../../assets/project/matribhumi-city.png'
 import project2 from '../../assets/project/Image-Gallery.png'
 import project3 from '../../assets/project/freedom-yoga.png'
-import project4 from '../../assets/project/freedom-yoga.png'
+import project4 from '../../assets/project/portfolio-website.png'
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -74,8 +74,7 @@ const projects = [
             "User can't log in to the admin dashboard. Only admin can access the dashboard through email and password."
         ],
         "links": {
-            "visitSite": "https://matribhumicitybd.netlify.app/",
-            "visitCode": "https://drive.google.com/file/d/1KPbt_p1DeYt0MtVysOIRDo--eXoY7ocg/view"
+            "visitSite": "https://matribhumicitybd.netlify.app/"
         },
         "image": `${project}`
     },
@@ -98,7 +97,7 @@ const projects = [
     {
         "_id": "3",
         "title": "Project - 3",
-        "description": "Class booking through stripe payment method and visit instructors classes ( Freedom Yoga )",
+        "description": "Yoga class booking through stripe payment method and visit instructors classes ( Freedom Yoga )",
         "technologies": ["React", "JavaScript", "Tailwind", "MERN"],
         "features": [
             "Implemented Firebase Authentication for a secure user entry point on the Freedom Yoga platform.",
@@ -121,8 +120,8 @@ const projects = [
             "Optimize code for performance and responsiveness; deploy the portfolio using platforms like Netlify or Vercel."
         ],
         "links": {
-            "visitSite": "https://example.com/project4/",
-            "visitCode": "https://github.com/user/project4"
+            "visitSite": "https://kaykobadyiasin-portfolio.netlify.app/",
+            "visitCode": "https://github.com/kaykobadyiasin/portfolio-kaykobad-yiasin"
         },
         "image": `${project4}`
     },
@@ -137,7 +136,7 @@ const experiences = [
         "company": "Matribhumi City",
         "duration": "Dec 2023 - Present",
         "logo": "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/400089755_716584007188431_5954228664237433551_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=_M1vwJB8ZlYAX8Ocx8T&_nc_ht=scontent.fdac14-1.fna&oh=00_AfABidEIRvIpSfFCQH6uQqTfp7m-UDI-5ZNHeJ5H4AD8mA&oe=65B102C4",
-        "description": "Another job description.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni omnis odio aspernatur obcaecati, tempore eos nobis facilis et iste!",
         "skills": ["React.js", "Next.js", "Problem Solving"]
     },
     {
@@ -224,9 +223,9 @@ const Home = () => {
                                         </div>
                                         <div className='flex flex-wrap gap-3 mt-5'>
                                             {
-                                                experiences?.map((item, index) => (
+                                                item?.skills?.map((skill, index) => (
 
-                                                    <span key={index} className='border flex justify-center items-center px-5 py-1 rounded-md'>{item?.skills}</span>
+                                                    <span key={index} className='border flex justify-center items-center px-5 py-1 rounded-md'>{skill}</span>
 
                                                 ))}
                                         </div>
@@ -276,11 +275,11 @@ const Home = () => {
                                             </ul>
                                             <div className='flex items-center gap-5 mt-3'>
                                                 {item?.links?.visitSite ?
-                                                    <Link to={item?.links?.visitSite} target='_blank' className=' text-lg rounded-md px-8 py-2 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 text-white'>Visit Site</Link> : <></>
+                                                    <Link to={item?.links?.visitSite} target='_blank' className=' text-lg rounded-md px-8 py-2 hover:bg-gradient-to-l transition-all duration-300 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 text-white'>Visit Site</Link> : <></>
                                                 }
 
                                                 {item?.links?.visitCode ?
-                                                    <Link to={item?.links?.visitCode} target='_blank' className=' text-lg rounded-md px-8 py-2 border'>Visit Github code</Link> : <></>
+                                                    <Link to={item?.links?.visitCode} target='_blank' className=' text-lg rounded-md px-8 py-2 border hover:bg-white hover:text-[#060817] transition-all duration-300'>Visit Github code</Link> : <></>
                                                 }
                                             </div>
                                         </div>
@@ -369,7 +368,7 @@ const Home = () => {
                             </div>
                             <label htmlFor='message' className="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ">Your message</label>
                             <textarea id="message" rows="4" className="mb-8 block py-2.5 px-0 rounded w-full text-md text-slate-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder='Your message'></textarea>
-                            <button type="submit" className="text-white bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                            <button type="submit" className="text-white bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 hover:bg-gradient-to-l transition-all duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                         </form>
 
                     </div>
