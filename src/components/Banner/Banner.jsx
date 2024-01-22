@@ -30,7 +30,7 @@ const Banner = () => {
                         <div className='lg:text-left text-center mt-10'>
                             <h3 className='text-xl font-light text-center'>Hi, I am</h3>
                             <h1 className='xl:text-5xl md:text-4xl text-3xl font-extrabold my-3 text-transparent bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 bg-clip-text'>Md Kaykobad Yiasin Khan</h1>
-                            <h3 className='text-xl font-light mb-8 text-center'>Front-end Developer</h3>
+                            <h3 className='text-xl font-light mb-8 text-center'>Professional Front-end Developer</h3>
                             {/* Front-end Developer | Junior Full Stack Developer | MERN Stack Developer  */}
 
                             <div className='flex justify-center'>

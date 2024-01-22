@@ -89,7 +89,7 @@ const projects = [
             "Optimized gallery performance by saving uploaded images in local storage, ensuring responsiveness and efficiency."
         ],
         "links": {
-            "visitSite": "https://65480900f16551161d26235f--magenta-taiyaki-9e2cc9.netlify.app/",
+            "visitSite": "https://customizable-image-gallery.netlify.app/",
             "visitCode": "https://github.com/kaykobadyiasin/Image-Gallery-Task"
         },
         "image": `${project2}`
@@ -133,20 +133,20 @@ const experiences = [
     {
         "_id": "2",
         "position": "Full Stack Developer",
-        "company": "Matribhumi City",
+        "company": "Matribhumi Group",
         "duration": "Dec 2023 - Present",
         "logo": "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/400089755_716584007188431_5954228664237433551_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=_M1vwJB8ZlYAX8Ocx8T&_nc_ht=scontent.fdac14-1.fna&oh=00_AfABidEIRvIpSfFCQH6uQqTfp7m-UDI-5ZNHeJ5H4AD8mA&oe=65B102C4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni omnis odio aspernatur obcaecati, tempore eos nobis facilis et iste!",
-        "skills": ["React.js", "Next.js", "Problem Solving"]
+        "description": "Innovative Full Stack Developer at Matribhumi City, excelling in React.js and Next.js, with a proven track record in effective problem-solving and collaborative teamwork.",
+        "skills": ["React.js", "Team Work", "Next.js", "Problem Solving"]
     },
     {
         "_id": "1",
-        "position": "Frontend developer web intern",
+        "position": "Frontend developer intern",
         "company": "Weero Digital",
         "duration": "Aug 2023 - Nov 2023",
         "logo": "https://studio.skill.jobs/media/logo/Weero.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque magni omnis odio aspernatur obcaecati, tempore eos nobis facilis et iste!",
-        "skills": ["React.js", "Team Work"]
+        "description": "React.js Intern at Weero Digital. Demonstrated strong teamwork, problem-solving, and adaptability in fast-paced projects.",
+        "skills": ["React.js", "Team Work", "Problem Solving"]
     }
 ]
 
