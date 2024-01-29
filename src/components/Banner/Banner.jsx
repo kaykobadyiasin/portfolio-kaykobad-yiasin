@@ -1,13 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../../assets/Kaykobad Yiasin.jpg'
 import { Icon } from '@iconify/react';
+import { gsap } from "gsap";
 
 
 const Banner = () => {
+
+    const circleBounceRef = useRef(null);
+    const socialRef = useRef(null);
+    const bgButtonRef = useRef(null);
+
+    useEffect(() => {
+
+        // button 
+        // gsap.to(bgButtonRef.current, {
+        //     opacity: 100,
+        //     scale: 1,
+        // })
+
+        // circle 
+        gsap.to(circleBounceRef.current, {
+            y: '20px',
+            duration: 1,
+            repeat: -1,
+            ease: "myWiggle",
+        })
+
+        // social icons 
+
+        gsap.to(socialRef.current, {
+            opacity: 100,
+            translateX: 0,
+            duration: 1,
+        })
+
+
+    }, [])
+
+
     return (
         <div className='relative'>
-            <div className='flex flex-col gap-5 absolute lg:top-52 top-20 z-50'>
+            <div ref={socialRef} className=' opacity-0 -translate-x-52 flex flex-col gap-5 absolute lg:top-52 top-20 z-50'>
                 <Link target='_blank' className='border border-l-0 pl-3 hover:bg-blue-600 transition-all duration-300 p-2 rounded-r' to={'https://github.com/kaykobadyiasin'}><Icon icon="mdi:github" className='text-2xl' /></Link>
 
                 <Link target='_blank' className='border border-l-0 pl-3 hover:bg-blue-600 transition-all duration-300 p-2 rounded-r' to={'https://www.linkedin.com/in/kaykobadyiasin/'}><Icon icon="ri:linkedin-fill" className='text-2xl' /></Link>
@@ -23,8 +57,8 @@ const Banner = () => {
                         <div className='relative'>
                             <div className='w-[400px] mx-auto h-[400px] rounded-full relative'>
                                 <img className='w-full h-full object-cover object-top rounded-full z-50' src={profile} alt="" />
-                                <div className='w-[300px] h-[300px] rounded-full top-20 translate-y-20 -translate-x-40 -left-4 z-10 border-2 border-gray-700 absolute opacity-50'></div>
-                                <div className='w-[100px] h-[100px] rounded-full top-0 right-0 z-10 absolute translate-x-5 translate-y-5 bg-gradient-to-r from-sky-500 to-blue-800'></div>
+                                <div className='w-[300px] h-[300px] rounded-full top-20 translate-y-20 -translate-x-48 -left-4 z-10 border-2 border-gray-700 absolute opacity-50'></div>
+                                <div className='w-[50px] h-[50px] rounded-full top-0 right-0 z-10 absolute translate-x-0 translate-y-16 bg-gradient-to-r from-sky-500 to-blue-800'></div>
                             </div>
                         </div>
                         <div className='lg:text-left text-center mt-10'>
@@ -34,15 +68,15 @@ const Banner = () => {
                             {/* Front-end Developer | Junior Full Stack Developer | MERN Stack Developer  */}
 
                             <div className='flex justify-center'>
-                                <Link to='https://drive.google.com/file/d/1KPbt_p1DeYt0MtVysOIRDo--eXoY7ocg/view?usp=drive_link' target='_blank' className=' text-lg rounded-md px-8 py-3 hover:bg-gradient-to-l transition-all duration-300 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600'>Visit Resume</Link>
+                                <Link ref={bgButtonRef} to='https://drive.google.com/file/d/1KPbt_p1DeYt0MtVysOIRDo--eXoY7ocg/view?usp=drive_link' target='_blank' className='text-lg rounded-md px-8 py-3 hover:bg-gradient-to-l transition-all duration-300 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600'>Visit Resume</Link>
                             </div>
 
                         </div>
                     </div>
                 </div>
                 <div className='w-full mt-10 flex justify-center text-center items-end'>
-                    <div className='w-8 h-16 border border-gray-600 rounded-full flex justify-center items-center'>
-                        <div className='w-2 h-2 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 rounded-full hover:bg-gradient-to-l transition-all duration-300'></div>
+                    <div ref={circleBounceRef} className='w-8 h-16 border border-gray-600 rounded-full flex justify-center items-center'>
+                        <div ref={circleBounceRef} className='w-2 h-2 bg-gradient-to-r from-sky-500 via-blue-500 to-blue-600 rounded-full hover:bg-gradient-to-l transition-all duration-300'></div>
                     </div>
                 </div>
             </div >

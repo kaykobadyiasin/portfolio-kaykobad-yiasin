@@ -132,11 +132,11 @@ const experiences = [
 
     {
         "_id": "2",
-        "position": "Full Stack Developer",
+        "position": "Web Developer",
         "company": "Matribhumi Group",
         "duration": "Dec 2023 - Present",
-        "logo": "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/400089755_716584007188431_5954228664237433551_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=_M1vwJB8ZlYAX8Ocx8T&_nc_ht=scontent.fdac14-1.fna&oh=00_AfABidEIRvIpSfFCQH6uQqTfp7m-UDI-5ZNHeJ5H4AD8mA&oe=65B102C4",
-        "description": "Innovative Full Stack Developer at Matribhumi City, excelling in React.js and Next.js, with a proven track record in effective problem-solving and collaborative teamwork.",
+        "logo": "https://media.licdn.com/dms/image/C4D0BAQE1WxYVQDJaWQ/company-logo_200_200/0/1656652577083/matribhumi_group_logo?e=1714608000&v=beta&t=Ud7YablBFFKgRsYrCJnidybWh7Woy6AKQ3fV_f3NabI",
+        "description": ["Created user-friendly web apps with React.js and Next.js.", "Quickly resolved technical challenges for smooth project performance.", "Collaborated effectively as a team player at Matribhumi City."],
         "skills": ["React.js", "Team Work", "Next.js", "Problem Solving"]
     },
     {
@@ -145,7 +145,7 @@ const experiences = [
         "company": "Weero Digital",
         "duration": "Aug 2023 - Nov 2023",
         "logo": "https://studio.skill.jobs/media/logo/Weero.png",
-        "description": "React.js Intern at Weero Digital. Demonstrated strong teamwork, problem-solving, and adaptability in fast-paced projects.",
+        "description": ["Demonstrated strong teamwork and adaptability in fast-paced React.js projects.", "Applied problem solving skills to effectively contribute to project objectives.", "Gained valuable experience in a dynamic environment at Weero Digital."],
         "skills": ["React.js", "Team Work", "Problem Solving"]
     }
 ]
@@ -219,7 +219,20 @@ const Home = () => {
                                             </div>
                                         </div>
                                         <div>
-                                            <p>{item?.description}</p>
+
+                                            <ul className='my-5 list-disc '>
+
+                                                {
+                                                    item?.description?.map((feature, index) => (
+                                                        <div key={index} className='pl-5 my-3'>
+                                                            <li className='flex gap-4 '>
+                                                                <span>•</span>
+                                                                <span>{feature}</span>
+                                                            </li>
+                                                        </div>
+                                                    ))
+                                                }
+                                            </ul>
                                         </div>
                                         <div className='flex flex-wrap gap-3 mt-5'>
                                             {
@@ -304,7 +317,7 @@ const Home = () => {
                             <div className='bg-[#060817] rounded-md p-4'>
                                 <div className='flex gap-5 mb-5'>
                                     <div>
-                                        <img src="https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/300061492_478416740960658_2837380305705383488_n.png?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=KdZXqoSYA4AAX8aYuw9&_nc_ht=scontent.fdac14-1.fna&oh=00_AfB6G0-kbomR-KUn2j0aYnlwuZKHVZdcUpeWrAqrRGp3aA&oe=65ACE717" className='w-14 h-14 object-cover rounded-md' alt="" />
+                                        <img src="https://media.licdn.com/dms/image/C510BAQHuG7d8pdHvLw/company-logo_200_200/0/1630632373628/dgai_logo?e=1714608000&v=beta&t=wj8CKo9GAc1fYBPyaCgvL-ke4_axZoium-xU2wjB-30" className='w-14 h-14 object-cover rounded-md' alt="" />
                                     </div>
                                     <div>
                                         <h2 className='font-semibold text-xl capitalize text-slate-300'>Diploma Engineering</h2>
