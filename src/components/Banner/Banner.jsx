@@ -41,7 +41,7 @@ const Banner = () => {
 
     return (
         <div className='relative'>
-            <div ref={socialRef} className=' opacity-0 -translate-x-52 flex flex-col gap-5 absolute lg:top-52 top-20 z-50'>
+            <div ref={socialRef} className=' opacity-0 -translate-x-52 flex flex-col gap-5 absolute lg:top-32 top-10 z-50'>
                 <Link target='_blank' className='border border-l-0 pl-3 hover:bg-blue-600 transition-all duration-300 p-2 rounded-r' to={'https://github.com/kaykobadyiasin'}><Icon icon="mdi:github" className='text-2xl' /></Link>
 
                 <Link target='_blank' className='border border-l-0 pl-3 hover:bg-blue-600 transition-all duration-300 p-2 rounded-r' to={'https://www.linkedin.com/in/kaykobadyiasin/'}><Icon icon="ri:linkedin-fill" className='text-2xl' /></Link>
